@@ -1,4 +1,4 @@
-FROM python:3.6.2-alpine
+FROM python:3.6.2-alpine3.6
 MAINTAINER "meganii <yuhei24@gmail.com>"
 
 RUN apk add --update --no-cache build-base
