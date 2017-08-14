@@ -32,3 +32,5 @@ RUN apk add --no-cache ${build_deps} && \
     git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git && \
     mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -n -y && \
     pip install mecab-python3
+
+CMD ["mecab", "-d", "/usr/local/lib/mecab/dic/mecab-ipadic-neologd"]
