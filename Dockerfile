@@ -13,7 +13,7 @@ RUN apk add --no-cache ${build_deps} && \
     apk add --no-cache ${dependencies} && \
     # Install mecab
     cd /tmp/mecab-0.996 && \
-        ./configure && \
+        ./configure --with-charset=utf8 && \
         make && \
         make check && \
         make install && \
@@ -21,7 +21,7 @@ RUN apk add --no-cache ${build_deps} && \
     rm -rf /tmp/mecab-0.996 && \
     # Install ipadic
     cd /tmp/mecab-ipadic-2.7.0-20070801 && \
-       ./configure && \
+       ./configure --with-charset=utf8 && \
        make && \
        make check && \
        make install && \
