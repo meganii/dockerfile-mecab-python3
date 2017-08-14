@@ -13,7 +13,7 @@ RUN apk add --no-cache ${build_deps} && \
     apk add --no-cache ${dependencies} && \
     # Install mecab
     cd /tmp/mecab-0.996 && \
-        ./configure --with-charset=utf8 && \
+        ./configure --with-charset=utf8 --enable-utf8-only  && \
         make && \
         make check && \
         make install && \
