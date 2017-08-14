@@ -12,4 +12,4 @@ RUN apk add --no-cache build-base && \
         make install && \
     cd / && \
     rm -rf /tmp/mecab-0.996 && \
-    pip install mecab-python3==0.996
+    pip install mecab-python3
